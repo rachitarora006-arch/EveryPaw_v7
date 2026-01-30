@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us | EveryPaw</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .contact-card { background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 16px; text-align: center; }
+        .contact-val { font-size: 1.2rem; color: var(--glow); font-weight: bold; margin-top: 10px; display: block;}
+    </style>
+</head>
+<body>
+
+{% include 'header.html' %}
+
+<div class="container">
+    <div class="glass-panel">
+        <h2 style="text-align: center;">Get in Touch</h2>
+        
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>📧 Email Support</h3>
+                <span class="contact-val">support@animalhelp.org</span>
+            </div>
+            <div class="contact-card">
+                <h3>🚨 Emergency</h3>
+                <span class="contact-val">112</span>
+            </div>
+            <div class="contact-card">
+                <h3>🇮🇳 India Helpline</h3>
+                <span class="contact-val">1962</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer-credits">Powered by <span class="coffee-badge">☕ Coffee Overflow Team</span></div>
+</div>
+</body>
+</html>

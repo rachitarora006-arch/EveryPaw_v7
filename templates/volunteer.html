@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer | EveryPaw</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+{% include 'header.html' %}
+
+<div class="container">
+    <div class="glass-panel" style="max-width: 600px; margin: 0 auto;">
+        <h2 style="text-align: center;">Join the Rescue Squad</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-muted);">Become a hero for the voiceless.</p>
+
+        <form method="POST">
+            <div>
+                <label style="display: block; margin-bottom: 0.5rem;">Full Name</label>
+                <input name="name" required>
+            </div>
+            <div>
+                <label style="display: block; margin-bottom: 0.5rem;">Phone Number</label>
+                <input name="phone" required>
+            </div>
+            <div>
+                <label style="display: block; margin-bottom: 0.5rem;">City/Region</label>
+                <input name="city" required>
+            </div>
+            <button type="submit" style="width: 100%; justify-content: center;">Register as Volunteer</button>
+        </form>
+    </div>
+    <div class="footer-credits">Powered by <span class="coffee-badge">☕ Coffee Overflow Team</span></div>
+</div>
+</body>
+</html>

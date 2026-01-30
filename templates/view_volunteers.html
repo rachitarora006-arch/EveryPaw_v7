@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteers List</title>
+</head>
+<body>
+
+<h2>Registered Volunteers</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>City</th>
+    </tr>
+
+    {% for v in volunteers %}
+    <tr>
+        <td>{{ v[0] }}</td>
+        <td>{{ v[1] }}</td>
+        <td>{{ v[2] }}</td>
+        <td>{{ v[3] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

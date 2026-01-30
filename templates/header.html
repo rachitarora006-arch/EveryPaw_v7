@@ -1,0 +1,114 @@
+<header>
+  <nav class="navbar animate-in">
+    <div class="nav-left">
+      <img src="{{ url_for('static', filename='logo.png') }}" class="logo spin-hover">
+      <span class="brand fade-in">Animal Accident Help</span>
+    </div>
+
+    <div class="nav-links">
+      <a class="nav-item" href="{{ url_for('home') }}">Home</a>
+      <a class="nav-item" href="{{ url_for('report') }}">Report Accident</a>
+      <a class="nav-item" href="{{ url_for('map') }}">Map</a>
+      <a class="nav-item" href="{{ url_for('learn') }}">Learn</a>
+      <a class="nav-item" href="{{ url_for('volunteer') }}">Volunteer</a>
+      <a class="nav-item" href="{{ url_for('contact') }}">Contact</a>
+      <a class="nav-item" href="{{ url_for('about') }}">About</a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  body {
+    margin: 0;
+  }
+
+  /* navbar glassy + sticky */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 32px;
+    background: rgba(5, 10, 30, 0.6);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* --- entrance animation --- */
+  .animate-in {
+    animation: slideDown 0.7s ease-out both;
+  }
+
+  @keyframes slideDown {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .logo {
+    height: 42px;
+    margin-right: 10px;
+    transition: transform .4s ease, filter .4s ease;
+  }
+
+  /* logo hover animation */
+  .spin-hover:hover {
+    transform: rotate(8deg) scale(1.05);
+    filter: drop-shadow(0 0 6px rgba(255,255,255,.5));
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .brand {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .fade-in {
+    animation: fadeIn 1s ease both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 16px;
+    color: #e9e9ff;
+    position: relative;
+    transition: transform .25s ease, color .25s ease;
+  }
+
+  /* underline slide animation */
+  .nav-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #7ab8ff;
+    border-radius: 4px;
+    transition: width .3s ease;
+  }
+
+  .nav-item:hover::after {
+    width: 100%;
+  }
+
+  /* link hover animation */
+  .nav-item:hover {
+    color: #a7c8ff;
+    transform: translateY(-2px);
+    text-shadow: 0 0 8px rgba(120,170,255,0.6);
+  }
+</style>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Report Accident | EveryPaw</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    {% include 'header.html' %}
+
+    <div class="container">
+        <div class="glass-panel" style="max-width: 600px; margin: 0 auto;">
+            <h2 style="text-align: center; color: var(--danger);">Report Emergency</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">
+                Your quick action can save a life.
+            </p>
+
+            <form method="POST">
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem;">Location Coordinates/Address</label>
+                    <input name="location" placeholder="e.g. 12th Main Road" required>
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem;">Animal Type</label>
+                    <input list="animals" name="animal" placeholder="Enter or choose animal">
+                    <datalist id="animals">
+                        <option value="Dog">
+                        <option value="Cat">
+                        <option value="Cow">
+                        <option value="Monkey">
+                        <option value="Horse">
+                        <option value="Other">
+                    </datalist>
+                </div>
+
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem;">Description</label>
+                    <textarea name="description" rows="4" placeholder="Describe the condition..." required></textarea>
+                </div>
+                <button type="submit" style="width: 100%; justify-content: center;">🚨 Submit Emergency Report</button>
+            </form>
+        </div>
+        <div class="footer-credits">Powered by <span class="coffee-badge">☕ Coffee Overflow Team</span></div>
+    </div>
+</body>
+
+</html>

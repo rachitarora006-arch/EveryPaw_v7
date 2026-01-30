@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>About EveryPaw</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+{% include 'header.html' %}
+
+<div class="container" style="display:flex; justify-content:center; align-items:center;">
+    <div class="glass-panel" style="max-width: 800px; text-align:center;" data-tilt data-tilt-glare data-tilt-max="5">
+        <h2>About The Project</h2>
+        <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-muted); margin: 2rem 0;">
+            EveryPaw is a next-generation platform designed to reduce animal accidents by enabling 
+            real-time reporting, geospatial mapping, and rapid volunteer connection.
+        </p>
+        <div class="quote-section" style="margin: 2rem 0;">Every report can save a life 🐾</div>
+    </div>
+</div>
+
+<div class="footer-credits">Powered by <span class="coffee-badge">☕ Coffee Overflow Team</span></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+</body>
+</html>

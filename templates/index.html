@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EveryPaw - Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .hero-section { text-align: center; padding: 4rem 0; }
+        .hero-logo { filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.4)); animation: float 6s ease-in-out infinite; margin-bottom: 1rem; }
+        .hero-title { font-size: 4rem; background: linear-gradient(to right, #fff, var(--glow)); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 0.5rem; }
+        .tagline { font-size: 1.5rem; color: var(--text-muted); margin-bottom: 3rem; letter-spacing: 1px; }
+        
+        /* Flow Chart */
+        .process-flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .flow-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 16px; text-align: center; transition: all 0.4s ease; }
+        .flow-card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.06); border-color: var(--accent); }
+        .flow-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+    </style>
+</head>
+<body>
+
+{% include 'header.html' %}
+
+<div class="container">
+    <div class="hero-section">
+        <img src="/static/logo.png" height="120" class="hero-logo" alt="EveryPaw Logo">
+        <h1 class="hero-title">EveryPaw</h1>
+        <p class="tagline">Because every paw matters.</p>
+        <div class="quote-section">“Small paws, big hearts. Every life matters.”</div>
+    </div>
+
+    <div class="glass-panel">
+        <h2 style="text-align: center; margin-bottom: 2rem;">How We Save Lives</h2>
+        <div class="process-flow">
+            <div class="flow-card" data-tilt>
+                <span class="flow-icon">📍</span>
+                <h3>Discover</h3>
+                <p>Spot an animal in need.</p>
+            </div>
+            <div class="flow-card" data-tilt>
+                <span class="flow-icon">📱</span>
+                <h3>Connect</h3>
+                <p>Report location instantly.</p>
+            </div>
+            <div class="flow-card" data-tilt>
+                <span class="flow-icon">🚑</span>
+                <h3>Care</h3>
+                <p>Volunteers dispatch.</p>
+            </div>
+            <div class="flow-card" data-tilt>
+                <span class="flow-icon">🛡️</span>
+                <h3>Protect</h3>
+                <p>Ensure safety & aid.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-credits">Powered by <span class="coffee-badge">☕ Coffee Overflow Team</span></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+</body>
+</html>

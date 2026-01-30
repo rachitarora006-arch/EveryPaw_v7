@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learn | EveryPaw</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .tips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .tip-card { background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 16px; border-left: 4px solid var(--primary); transition: transform 0.3s; }
+        .tip-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.08); }
+    </style>
+</head>
+<body>
+
+{% include 'header.html' %}
+
+<div class="container">
+    <h2 style="text-align: center;">Safety & Awareness</h2>
+    <div class="quote-section">“Care today creates a better tomorrow for every paw.”</div>
+
+    <div class="tips-grid">
+        <div class="tip-card" data-tilt>
+            <h3>🚗 Drive Safely</h3>
+            <p style="color:var(--text-muted); margin-top:10px;">Drive slowly in wildlife areas.</p>
+        </div>
+        <div class="tip-card" style="border-color: var(--accent);" data-tilt>
+            <h3>🔇 No Honking</h3>
+            <p style="color:var(--text-muted); margin-top:10px;">Loud noises cause panic in animals.</p>
+        </div>
+        <div class="tip-card" style="border-color: var(--glow);" data-tilt>
+            <h3>🍎 Do Not Feed</h3>
+            <p style="color:var(--text-muted); margin-top:10px;">Do not disrupt natural feeding habits.</p>
+        </div>
+        <div class="tip-card" style="border-color: var(--danger);" data-tilt>
+            <h3>📞 Report Instantly</h3>
+            <p style="color:var(--text-muted); margin-top:10px;">Time is critical for injured animals.</p>
+        </div>
+    </div>
+    
+    <div class="footer-credits">Powered by <span class="coffee-badge">☕ Coffee Overflow Team</span></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+</body>
+</html>

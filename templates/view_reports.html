@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submitted Reports</title>
+</head>
+<body>
+
+<h2>Animal Accident Reports</h2>
+
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>Location</th>
+    <th>Animal</th>
+    <th>Description</th>
+</tr>
+
+{% for r in reports %}
+<tr>
+    <td>{{ r[0] }}</td>
+    <td>{{ r[1] }}</td>
+    <td>{{ r[2] }}</td>
+    <td>{{ r[3] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>
