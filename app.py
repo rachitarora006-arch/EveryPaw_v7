@@ -4,7 +4,12 @@ import os
 import tempfile
 from openpyxl import Workbook
 
-app = Flask(__name__)
+# Get the directory where app.py is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+app = Flask(__name__, 
+            template_folder=os.path.join(BASE_DIR, 'templates'),
+            static_folder=os.path.join(BASE_DIR, 'static'))
 app.secret_key = "supersecretkey123"
 
 # -----------------------------
@@ -16,7 +21,7 @@ ADMIN_PASSWORD = "1234"
 # -----------------------------
 # Database Path
 # -----------------------------
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 DB_PATH = os.path.join('/tmp', 'database.db')
 
 
